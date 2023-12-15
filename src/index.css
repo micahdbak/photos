@@ -1,0 +1,41 @@
+/* overwrite the CSS variables defined in mdb-react-components */
+:root {
+	/* general */
+	--mdb-max-page-width: 1024px;
+	--mdb-page-width: min(var(--mdb-max-page-width), 100vw - 32px);
+	--mdb-page-margin: calc((100vw - var(--mdb-page-width)) / 2);
+	--mdb-font-family-sans-serif: 'Inter';
+	--mdb-font-family-monospace: 'IBM Plex Mono';
+	--mdb-transition-time: 0.1s;
+	--mdb-shadow-color: #000000;
+	--mdb-border-color: #404048;
+	--mdb-border-color-alt: #303038;
+	--mdb-background-color: #08080a;
+	--mdb-background-color-alt: #202028;
+	--mdb-color: #f0f0f0;
+
+	/* Button */
+	--mdb-button-color: var(--mdb-color);
+	--mdb-button-idle-color: #404048;
+	--mdb-button-border-color: #404048;
+	--mdb-button-hover-color: #505058;
+	--mdb-button-active-color: #303038;
+	--mdb-button-transparent-color: var(--mdb-color);
+	--mdb-button-transparent-idle-color: var(--mdb-background-color);
+	--mdb-button-transparent-border-color: #282830;
+	--mdb-button-transparent-hover-color: #303038;
+	--mdb-button-transparent-active-color: #202028;
+	--mdb-button-primary-color: var(--mdb-color);
+	--mdb-button-primary-idle-color: #3458f8;
+	--mdb-button-primary-border-color: #3860f8;
+	--mdb-button-primary-hover-color: #6080ff;
+	--mdb-button-primary-active-color: #2848f0;
+
+	/* Icon */
+	--mdb-icon-color: var(--mdb-color);
+	--mdb-icon-stroke-width: 2px;
+
+	/* Navigation */
+	--mdb-navigation-bar-height: 64px;
+	--mdb-navigation-sidebar-padding: 8px;
+}
