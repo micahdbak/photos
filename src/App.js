@@ -5,10 +5,9 @@ import {
   Button,
   Dropdown,
   Flex,
+  Gallery,
   Icon
 } from 'mdb-react-components';
-
-import { PhotoGallery } from './components';
 
 import './App.css';
 
@@ -141,7 +140,7 @@ function App() {
                   {collection.title}
                   <img src={`${camerasDir}/${collection.camera}.png`} />
                 </h2>
-                <PhotoGallery
+                <Gallery.Thumbnails
                   photos={paths(
                     `${photosDir}/${year.dir}/${collection.dir}`,
                     collection.photos,
