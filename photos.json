@@ -1,61 +1,71 @@
 [
   {
-    "dir": "2022",
-    "dirs": [
-      {
-        "dir": "0823",
-        "title": "August 23rd",
-        "photos": 22
-      },
-      {
-        "dir": "0919",
-        "title": "September 19th",
-        "photos": 31
-      },
-      {
-        "dir": "0927",
-        "title": "September 27th",
-        "photos": 26
-      },
-      {
-        "dir": "1130",
-        "title": "November 30th",
-        "photos": 19
-      },
-      {
-        "dir": "1222",
-        "title": "December 22nd",
-        "photos": 17
-      }
-    ]
-  },
-  {
     "dir": "2023",
     "dirs": [
       {
-        "dir": "0112",
-        "title": "January 12th",
-        "photos": 26
-      },
-      {
-        "dir": "0117",
-        "title": "January 17th",
-        "photos": 10
-      },
-      {
-        "dir": "0124",
-        "title": "January 24th",
-        "photos": 10
+        "dir": "0720",
+        "title": "July 20th",
+        "photos": 46,
+        "camera": "pentax"
       },
       {
         "dir": "0719",
         "title": "July 19th",
-        "photos": 15
+        "photos": 15,
+        "camera": "rolleiflex"
       },
       {
-        "dir": "0720",
-        "title": "July 20th",
-        "photos": 46
+        "dir": "0124",
+        "title": "January 24th",
+        "photos": 10,
+        "camera": "rolleiflex"
+      },
+      {
+        "dir": "0117",
+        "title": "January 17th",
+        "photos": 10,
+        "camera": "rolleiflex"
+      },
+      {
+        "dir": "0112",
+        "title": "January 12th",
+        "photos": 26,
+        "camera": "pentax"
+      }
+    ]
+  },
+  {
+    "dir": "2022",
+    "dirs": [
+      {
+        "dir": "1222",
+        "title": "December 22nd",
+        "photos": 17,
+        "camera": "pentax"
+      },
+      {
+        "dir": "1130",
+        "title": "November 30th",
+        "photos": 19,
+        "camera": "pentax"
+      },
+      {
+        "dir": "0927",
+        "title": "September 27th",
+        "photos": 26,
+        "camera": "voigtlander"
+      },
+      {
+        "dir": "0919",
+        "title": "September 19th",
+        "photos": 31,
+        "camera": "pentax"
+      },
+      {
+        "dir": "0823",
+        "title": "August 23rd",
+        "photos": 22,
+        "camera": "pax"
       }
     ]
   }
