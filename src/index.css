@@ -13,6 +13,7 @@
 	--mdb-background-color: #101014;
 	--mdb-background-color-alt: #202028;
 	--mdb-color: #f0f0f0;
+	--mdb-color-alt: #808088;
 
 	/* Button */
 	--mdb-button-color: var(--mdb-color);
@@ -38,4 +39,17 @@
 	/* Navigation */
 	--mdb-navigation-bar-height: 64px;
 	--mdb-navigation-sidebar-padding: 8px;
+
+	/* other */
+	scrollbar-color: #202028 #181820;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #181820;
+}
+
+*::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 6px;
+	background-color: #202028;
 }

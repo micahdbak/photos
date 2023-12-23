@@ -8,12 +8,35 @@ import {
   Icon
 } from 'mdb-react-components';
 
+import { PhotoGallery } from './components';
+
+import './App.css';
+
+function Anchor(props) {
+  const { id } = props;
+
+  return <div id={id} className='mdb-anchor'></div>;
+}
+
 function App() {
   const [years, setYears] = useState([]);
 
   const sidebarItemStyle = {
     justifyContent: 'flex-start'
   };
+
+  function paths(root, numPhotos, ext) {
+    const collection = [];
+
+    for (let i = 1; i <= numPhotos; i++) {
+      collection.push(`${root}/${i}.${ext}`);
+    }
+
+    return collection;
+  }
+
+  const photosDir = process.env.PUBLIC_URL + '/photos';
+  const camerasDir = process.env.PUBLIC_URL + '/cameras';
 
   // on page load
   useEffect(() => {
@@ -86,6 +109,7 @@ function App() {
           >
             {year.dirs.map(collection =>
               <Button
+                href={`#${year.dir}+${collection.dir}`}
                 className='transparent small'
                 style={sidebarItemStyle}
                 depth={1}
@@ -96,17 +120,44 @@ function App() {
           </Dropdown>
         )}
       </Flex.Container>
-      <Flex.Item flex='1 0' style={{ position: 'relative' }}>
-        <p
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)'
-          }}
-        >
-          Under construction; expect more soon!
-        </p>
+      <Flex.Item
+        flex='1 0'
+        style={{
+          overflowY: 'scroll',
+          height: '100vh'
+        }}
+      >
+        {years.map(year =>
+          <section>
+            <h1 className='mdb-sticky-header'>{year.dir}</h1>
+            {year.dirs.map(collection =>
+              <section
+                style={{
+                  padding: '16px 32px'
+                }}
+              >
+                <Anchor id={`${year.dir}+${collection.dir}`} />
+                <h2 className='mdb-collection-header'>
+                  {collection.title}
+                  <img src={`${camerasDir}/${collection.camera}.png`} />
+                </h2>
+                <PhotoGallery
+                  photos={paths(
+                    `${photosDir}/${year.dir}/${collection.dir}`,
+                    collection.photos,
+                    'png'
+                  )}
+                  thumbnails={paths(
+                    `${photosDir}/${year.dir}/${collection.dir}`,
+                    collection.photos,
+                    'jpg'
+                  )}
+                  width='min(50vw, 600px)'
+                />
+              </section>
+            )}
+          </section>
+        )}
       </Flex.Item>
     </Flex.Container>
   );

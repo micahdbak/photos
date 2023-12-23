@@ -1,0 +1,34 @@
+.mdb-photo-gallery-photo {
+	border-radius: 2px;
+	border: 1px solid var(--mdb-border-color);
+	object-fit: contain;
+	background-size: 100% 100%;
+}
+
+.mdb-photo-gallery-prompt {
+	margin: 0;
+	margin-right: auto;
+	line-height: 20px;
+	font-size: 10pt;
+	color: var(--mdb-color-alt);
+}
+
+.mdb-photo-gallery-thumbnail {
+	border-radius: 1px;
+	border: 2px solid var(--mdb-border-color);
+	width: min-content;
+	max-width: 48px;
+	height: min-content;
+	max-height: 48px;
+	object-fit: contain;
+	cursor: pointer;
+}
+
+.mdb-photo-gallery-thumbnail.selected {
+	box-shadow: 0 0 0 1px var(--mdb-color);
+}
+
+.mdb-photo-gallery-control {
+	margin: 0 8px;
+	font-size: 10pt;
+}
