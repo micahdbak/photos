@@ -152,7 +152,8 @@ function App() {
                     collection.photos,
                     'jpg'
                   )}
-                  width='min(50vw, 600px)'
+                  maxWidth='100%'
+                  maxHeight='50vh'
                 />
               </section>
             )}
